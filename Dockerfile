@@ -1,5 +1,5 @@
 # Used for prod build.
-FROM 230208930072.dkr.ecr.us-east-1.amazonaws.com/prod-laradash-api:latest as php
+FROM 230208930072.dkr.ecr.us-east-1.amazonaws.com/prod-laradash-base-image:latest as php
 
 # # Set environment variables
 # ENV PHP_OPCACHE_ENABLE=1
