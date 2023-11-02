@@ -1,9 +1,14 @@
 
 ## Laravel Docker AWS Deployment
 
-This repository, is used as a starting ground for my Laravel Docker AWS Deployment.
+## setup
 
-Simply clone this repository, start docker then run `make fresh` to run our application.
-Access via http://127.0.0.1:8080
-
-Run `make help` to see all commands.
+``` bash
+make fresh
+docker compose exec api composer update
+# or 
+docker compose exec api composer install
+docker compose exec api php artisan jetstream:install inertia
+docker compose exec api php artisan migrate
+# DB_HOSTはコンテナ名であることに留意
+```
